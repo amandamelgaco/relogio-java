@@ -36,8 +36,12 @@ public class Relogio  extends JFrame {
     }
 
     private void atualizarRelogio() {
-        String horaAtual = new SimpleDateFormat("HH:mm:ss").format(new Date());
-        label.setText(horaAtual);
+        Date agora = new Date();
+
+        String data = new SimpleDateFormat("dd/MM/yyyy").format(agora);
+        String hora = new SimpleDateFormat("HH:mm:ss").format(agora);
+
+        label.setText("<html>" + data + "<br>" + hora + "</html>");
     }
 
     public static void main(String[] args) {
